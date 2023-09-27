@@ -300,7 +300,7 @@ def main():
 
     #定义模型并加入设备
     #module = P3D199(pretrained=False, modality='RGB', num_classes=101).to(device)
-    module = swin_t(num_class=101).to(device)
+    module = swin_t(num_class=101, drop_rate=0.5).to(device)
 
     #定义损失函数
     loss_func = nn.CrossEntropyLoss() #交叉熵损失

@@ -794,21 +794,21 @@ class ClassifySwinTransformer3D(nn.Module):
 
 
 
-def swin_t(num_class=101, patch_size=(2, 4, 4), window_size=(2, 7, 7)):
+def swin_t(num_class=101, patch_size=(2, 4, 4), window_size=(2, 7, 7), drop_rate=0.5):
     return ClassifySwinTransformer3D(num_class=num_class, patch_size=patch_size, window_size=window_size,
-                                     embed_dim=96, depths=[2, 2, 6, 2], num_heads=(3, 6, 12, 24))
+                                     embed_dim=96, depths=[2, 2, 6, 2], num_heads=(3, 6, 12, 24), drop_rate=drop_rate)
 
 
-def swin_s(num_class=101, patch_size=(2, 4, 4), window_size=(2, 7, 7)):
+def swin_s(num_class=101, patch_size=(2, 4, 4), window_size=(2, 7, 7), drop_rate=0.5):
     return ClassifySwinTransformer3D(num_class=num_class, patch_size=patch_size, window_size=window_size,
-                                     embed_dim=96, depths=[2, 2, 18, 2], num_heads=(3, 6, 12, 24))
+                                     embed_dim=96, depths=[2, 2, 18, 2], num_heads=(3, 6, 12, 24), drop_rate=drop_rate)
 
 
-def swin_b(num_class=101, patch_size=(2, 4, 4), window_size=(2, 7, 7)):
+def swin_b(num_class=101, patch_size=(2, 4, 4), window_size=(2, 7, 7), drop_rate=0.5):
     return ClassifySwinTransformer3D(num_class=num_class, patch_size=patch_size, window_size=window_size,
-                                     embed_dim=128, depths=[2, 2, 18, 2], num_heads=(4, 8, 16, 32))
+                                     embed_dim=128, depths=[2, 2, 18, 2], num_heads=(4, 8, 16, 32), drop_rate=drop_rate)
 
 
-def swin_l(num_class=101, patch_size=(2, 4, 4), window_size=(2, 7, 7)):
+def swin_l(num_class=101, patch_size=(2, 4, 4), window_size=(2, 7, 7), drop_rate=0.5):
     return ClassifySwinTransformer3D(num_class=num_class, patch_size=patch_size, window_size=window_size,
-                                     embed_dim=192, depths=[2, 2, 18, 2], num_heads=(6, 12, 24, 48))
+                                     embed_dim=192, depths=[2, 2, 18, 2], num_heads=(6, 12, 24, 48), drop_rate=drop_rate)
